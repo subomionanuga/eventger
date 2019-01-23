@@ -14,14 +14,19 @@
 <body>
   <h1>Eventger Deluxe Event Planner</h1>
       <center>
-        <form>
+        <form id='form'>
           <label for='name'>Event Description</label>
-          <input type='text' name='name'>
+          <input id='desc_id' type='text' name='name'>
           <label for='date'>Date of Event</label>
-          <input type='date' name='date'>
-          <input type='submit' value='Submit'>
+          <input id='date_id' type='date' name='date'>
+          <button type="button" name="button" id="button">Submit</button>
+          <!-- <button id='button_id' type='button'>Submit</button> -->
           </form>
+            <div id='eventHistory'>
+            </div>
       </center>
       <script src="src/eventger.js"></script>
+      <script src="src/interface.js"></script>
+
 </body>
 </html>

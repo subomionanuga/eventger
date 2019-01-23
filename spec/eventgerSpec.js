@@ -1,4 +1,4 @@
-describe('Eventger', function() {
+describe('Event', function() {
   var event
 
   testWill('check that an event has a description', function() {
@@ -14,5 +14,14 @@ describe('Eventger', function() {
   testWill('check that an event has a time', function() {
     event = new Event("Subomi's fantastic jamboree", "22/01/2019", "18:45")
     expect(event.time).toBeEqualTo('18:45')
+  })
+})
+
+describe('Event List', function() {
+  var eventList
+
+  testWill('check that a new instance of event has an empty array', function() {
+    eventList = new EventList
+    expect(eventList.entries).toBeEqualTo([])
   })
 })

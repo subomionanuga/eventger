@@ -21,7 +21,7 @@ describe('Event List', function() {
   var eventList
 
   testWill('check that a new instance of event has an empty array', function() {
-    eventList = new EventList
-    expect(eventList.entries).toBeEqualTo([])
+    eventList = new EventList()
+    expect(eventList.entries.length).toBeEqualTo(0)
   })
 })

@@ -1,6 +1,6 @@
 describe('Event List', function() {
   var eventList = new EventList()
-  var event = new Event("Subomi's fantastic jamboree", "24/01/2019", '18:45')
+  var event = new Event("Subomi's fantastic jamboree", "25/01/2019", '18:45')
 
   testWill('check that a new instance of event has an empty array', function() {
     expect(eventList.entries.length).toBeEqualTo(0)
@@ -15,6 +15,7 @@ describe('Event List', function() {
     var pastEvent = new Event("Subomi's NEW YEAR'S jamboree", "01/01/2019", '18:45')
     eventList.storeEvent(pastEvent)
     eventList.storeEvent(event)
-    expect(eventList.upcomingEvents()).toBeEqualTo(event)
+    var upcomingEvents = eventList.upcomingEvents()
+    expect(upcomingEvents[0]).toBeEqualTo(event)
   })
 })

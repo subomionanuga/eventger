@@ -14,11 +14,11 @@ class EventList {
       var date = new Date().toLocaleDateString()
 
       console.log(event.date)
-      console.log(date)
+      // console.log(date)
       if (event.date > date) {
-        console.log('Hi')
+        // console.log('Hi')
       upcoming.push(event)
-      console.log(upcoming[0] + 'This is the expected return')
+      // console.log(upcoming[0] + 'This is the expected return')
       }
     })
     return upcoming

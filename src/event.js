@@ -1,8 +1,13 @@
 class Event {
-  constructor(desc, date, time) {
+  constructor(desc, date) {
     this.desc = desc
     this.date = date
-    this.time = time
+  }
 
+  displayAnEvent() {
+    var div = document.createElement('div')
+    div.innerText = this.desc + " - " + this.date
+    console.log('Display An Event called in Event')
+    return div
   }
 }

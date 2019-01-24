@@ -1,7 +1,6 @@
 class EventList {
   constructor() {
     this.entries = []
-    // this.upcoming = []
   }
   storeEvent(event) {
     this.entries.push(event)
@@ -12,15 +11,22 @@ class EventList {
 
     this.entries.forEach(function(event) {
       var date = new Date().toLocaleDateString()
-
-      console.log(event.date)
-      // console.log(date)
       if (event.date > date) {
-        // console.log('Hi')
       upcoming.push(event)
-      // console.log(upcoming[0] + 'This is the expected return')
       }
     })
     return upcoming
+  }
+
+  displayEvent() {
+    // var eventHistory = document.getElementById("eventHistory")
+    var div = document.createElement('div')
+    // ol.innerHTML = event.desc + " - " + event.date
+    this.upcomingEvents().forEach(function(event) {
+      var eventElements = event.displayAnEvent()
+      console.log("Display event called")
+      div.appendChild(eventElements)
+    })
+    return div
   }
 }

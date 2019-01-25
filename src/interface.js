@@ -1,13 +1,13 @@
-var eventList = new EventList()
+let eventList = new EventList()
 
 function listEvent() {
-  var newEvent = document.getElementById("desc_id")
-  var newDate = document.getElementById("date_id")
-  // var newTime = document.getElementById("time_id")
-  var send = document.getElementById("button")
-  // var eventHistory = document.getElementById("eventHistory")
+  let newEvent = document.getElementById("desc_id")
+  let newDate = document.getElementById("date_id")
+  // let newTime = document.getElementById("time_id")
+  let send = document.getElementById("button")
+  // let eventHistory = document.getElementById("eventHistory")
   send.onclick = function() {
-    var event = new Event(newEvent.value, newDate.value)
+    let event = new Event(newEvent.value, newDate.value)
     eventList.storeEvent(event)
     newEvent.value = ""
     newDate.value = ""
@@ -15,13 +15,13 @@ function listEvent() {
     // console.log(eventList.upcomingEvents())
     display()
   }
-    // var displayEvent = document.createElement("ol")
+    // let displayEvent = document.createElement("ol")
     // displayEvent.innerHTML = event.desc + " - " + event.date //+ " - " + event.time
     // eventHistory.prepend(displayEvent)
     // eventList.displayEvent()
 
   function display() {
-    var eventsDiv = document.getElementById("eventHistory")
+    let eventsDiv = document.getElementById("eventHistory")
     listOfEvents = eventList.displayEvent()
 
     // eventsDiv.innerHTML = ''
@@ -30,3 +30,14 @@ function listEvent() {
 }
 document.onload = listEvent()
 document.onload = eventList
+
+const appKey = '82063aa976f6af9ea7f745a698de39f7'
+
+let searchButton = document.getElementById("search-btn");
+let searchInput = document.getElementById("search-txt");
+let cityName = document.getElementById("city-name");
+let icon = document.getElementById("icon");
+let temperature = document.getElementById("temp");
+let humidity = document.getElementById("humidity-div");
+
+searchButton.addEventListener("click", findWeatherDetails)

@@ -8,7 +8,7 @@ class EventList {
   }
 
   upcomingEvents() {
-    var upcoming = []
+    let upcoming = []
 
     this.entries.forEach(function(event) {
       if (new Date(event.date) >= new Date()) {
@@ -25,11 +25,11 @@ class EventList {
   }
 
   displayEvent() {
-    // var eventHistory = document.getElementById("eventHistory")
-    var div = document.createElement('div')
+    // let eventHistory = document.getElementById("eventHistory")
+    let div = document.createElement('div')
     // ol.innerHTML = event.desc + " - " + event.date
     this.upcomingEvents().forEach(function(event) {
-      var eventElements = event.displayAnEvent()
+      let eventElements = event.displayAnEvent()
       div.appendChild(eventElements)
     })
     return div

@@ -5,7 +5,7 @@ class Event {
   }
 
   displayAnEvent() {
-    var div = document.createElement('div')
+    let div = document.createElement('div')
     div.innerText = this.desc + " - " + this.date
     return div
   }

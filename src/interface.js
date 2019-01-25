@@ -24,7 +24,7 @@ function listEvent() {
     var eventsDiv = document.getElementById("eventHistory")
     listOfEvents = eventList.displayEvent()
 
-    eventsDiv.innerHTML = ''
+    // eventsDiv.innerHTML = ''
     eventsDiv.appendChild(listOfEvents)
   }
 }

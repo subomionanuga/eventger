@@ -7,7 +7,6 @@ class Event {
   displayAnEvent() {
     var div = document.createElement('div')
     div.innerText = this.desc + " - " + this.date
-    console.log('Display An Event called in Event')
     return div
   }
 }

@@ -12,11 +12,16 @@ class EventList {
 
     this.entries.forEach(function(event) {
       if (new Date(event.date) >= new Date()) {
-        console.log(event);
+        // console.log(event.date)
+        // console.log(event);
       upcoming.push(event)
       }
     })
     return upcoming
+  }
+
+  sortedEvents() {
+
   }
 
   displayEvent() {

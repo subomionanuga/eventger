@@ -31,8 +31,6 @@ function listEvent() {
 document.onload = listEvent()
 document.onload = eventList
 
-const appKey = '82063aa976f6af9ea7f745a698de39f7'
-
 let searchButton = document.getElementById("search-btn");
 let searchInput = document.getElementById("search-txt");
 let cityName = document.getElementById("city-name");

@@ -4,14 +4,15 @@ class EventList {
   }
   storeEvent(event) {
     this.entries.push(event)
+    // console.log(event);
   }
 
   upcomingEvents() {
     var upcoming = []
 
     this.entries.forEach(function(event) {
-      var date = new Date().toLocaleDateString()
-      if (event.date > date) {
+      if (new Date(event.date) >= new Date()) {
+        console.log(event);
       upcoming.push(event)
       }
     })
@@ -24,7 +25,6 @@ class EventList {
     // ol.innerHTML = event.desc + " - " + event.date
     this.upcomingEvents().forEach(function(event) {
       var eventElements = event.displayAnEvent()
-      console.log("Display event called")
       div.appendChild(eventElements)
     })
     return div

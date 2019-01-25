@@ -8,21 +8,22 @@ function listEvent() {
   // var eventHistory = document.getElementById("eventHistory")
   send.onclick = function() {
     var event = new Event(newEvent.value, newDate.value)
-    console.log(newEvent.value, newDate.value)
     eventList.storeEvent(event)
-    console.log('button clicked')
+    newEvent.value = ""
+    newDate.value = ""
+
+    // console.log(eventList.upcomingEvents())
     display()
-    console.log('display called in interface');
   }
     // var displayEvent = document.createElement("ol")
     // displayEvent.innerHTML = event.desc + " - " + event.date //+ " - " + event.time
     // eventHistory.prepend(displayEvent)
-    // newEvent.value = ""
     // eventList.displayEvent()
 
   function display() {
     var eventsDiv = document.getElementById("eventHistory")
     listOfEvents = eventList.displayEvent()
+
     eventsDiv.innerHTML = ''
     eventsDiv.appendChild(listOfEvents)
   }
